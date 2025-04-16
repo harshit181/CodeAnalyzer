@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.codeanalyzer.model.AnalysisResultTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-04-16T08:14:45" hostname="abade34b91b3" time="0.006">
+  <properties/>
+  <testcase name="constructor_withNonEmptyList_shouldCreateInstance()" classname="com.codeanalyzer.model.AnalysisResultTest" time="0.001"/>
+  <testcase name="getMethods_shouldReturnMethodsList()" classname="com.codeanalyzer.model.AnalysisResultTest" time="0.001"/>
+  <testcase name="getMethodCount_withEmptyList_shouldReturnZero()" classname="com.codeanalyzer.model.AnalysisResultTest" time="0.001"/>
+  <testcase name="getMethodCount_withNonEmptyList_shouldReturnCorrectCount()" classname="com.codeanalyzer.model.AnalysisResultTest" time="0.001"/>
+  <testcase name="constructor_withEmptyList_shouldCreateInstance()" classname="com.codeanalyzer.model.AnalysisResultTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

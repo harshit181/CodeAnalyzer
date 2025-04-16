@@ -28,7 +28,7 @@ public class CommandLineProcessor {
         this.options = createOptions();
         this.parser = new DefaultParser();
         this.formatter = new HelpFormatter();
-        this.scanner = new Scanner(System.in);
+        // Scanner will be initialized when needed in interactive mode
     }
     
     /**
@@ -114,28 +114,36 @@ public class CommandLineProcessor {
         System.out.println("\nAnalysis completed. Found " + result.getMethods().size() + " methods:");
         displayMethods(result.getMethods());
         
-        boolean running = true;
-        while (running) {
-            System.out.println("\nEnter the ID of a method to generate test objects (or 'q' to quit): ");
-            String input = scanner.nextLine().trim();
-            
-            if ("q".equalsIgnoreCase(input)) {
-                running = false;
-            } else {
-                try {
-                    int methodId = Integer.parseInt(input);
-                    if (methodId >= 0 && methodId < result.getMethods().size()) {
-                        generateTestObjects(result.getMethods().get(methodId));
-                    } else {
-                        System.out.println("Invalid method ID. Please try again.");
+        // Check if we're running in an environment with input available
+        if (System.console() != null) {
+            // Interactive mode with user input
+            this.scanner = new Scanner(System.in);
+            boolean running = true;
+            while (running) {
+                System.out.println("\nEnter the ID of a method to generate test objects (or 'q' to quit): ");
+                String input = scanner.nextLine().trim();
+                
+                if ("q".equalsIgnoreCase(input)) {
+                    running = false;
+                } else {
+                    try {
+                        int methodId = Integer.parseInt(input);
+                        if (methodId >= 0 && methodId < result.getMethods().size()) {
+                            generateTestObjects(result.getMethods().get(methodId));
+                        } else {
+                            System.out.println("Invalid method ID. Please try again.");
+                        }
+                    } catch (NumberFormatException e) {
+                        System.out.println("Invalid input. Please enter a method ID or 'q' to quit.");
                     }
-                } catch (NumberFormatException e) {
-                    System.out.println("Invalid input. Please enter a method ID or 'q' to quit.");
                 }
             }
+            
+            System.out.println("Exiting. Goodbye!");
+        } else {
+            // Non-interactive mode, just display info about methods
+            System.out.println("\nRunning in non-interactive mode. To generate test objects, run with an interactive console.");
         }
-        
-        System.out.println("Exiting. Goodbye!");
     }
     
     /**

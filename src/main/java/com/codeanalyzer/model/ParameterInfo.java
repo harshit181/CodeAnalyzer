@@ -89,4 +89,19 @@ public class ParameterInfo {
                "long".equals(typeName) || "short".equals(typeName) || "byte".equals(typeName) ||
                "char".equals(typeName) || "boolean".equals(typeName);
     }
+    
+    /**
+     * @return A string representation of this parameter.
+     */
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(type).append(" ").append(name);
+        
+        if (usedInCondition) {
+            sb.append(" (used in condition)");
+        }
+        
+        return sb.toString();
+    }
 }

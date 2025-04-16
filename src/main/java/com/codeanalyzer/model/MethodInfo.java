@@ -87,4 +87,12 @@ public class MethodInfo {
     public boolean isVoidReturn() {
         return "void".equals(returnType);
     }
+    
+    /**
+     * @return A string representation of this method info.
+     */
+    @Override
+    public String toString() {
+        return getSignature();
+    }
 }
