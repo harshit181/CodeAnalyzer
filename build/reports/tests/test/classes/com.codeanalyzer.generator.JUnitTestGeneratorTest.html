@@ -3,17 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="x-ua-compatible" content="IE=edge"/>
-<title>Test results - MethodAnalyzerTest</title>
+<title>Test results - JUnitTestGeneratorTest</title>
 <link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
 <link href="../css/style.css" rel="stylesheet" type="text/css"/>
 <script src="../js/report.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="content">
-<h1>MethodAnalyzerTest</h1>
+<h1>JUnitTestGeneratorTest</h1>
 <div class="breadcrumbs">
 <a href="../index.html">all</a> &gt; 
-<a href="../packages/com.codeanalyzer.analyzer.html">com.codeanalyzer.analyzer</a> &gt; MethodAnalyzerTest</div>
+<a href="../packages/com.codeanalyzer.generator.html">com.codeanalyzer.generator</a> &gt; JUnitTestGeneratorTest</div>
 <div id="summary">
 <table>
 <tr>
@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">4</div>
+<div class="counter">5</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.019s</div>
+<div class="counter">0.018s</div>
 <p>duration</p>
 </div>
 </td>
@@ -63,6 +63,9 @@
 <li>
 <a href="#tab0">Tests</a>
 </li>
+<li>
+<a href="#tab1">Standard error</a>
+</li>
 </ul>
 <div id="tab0" class="tab">
 <h2>Tests</h2>
@@ -75,26 +78,42 @@
 </tr>
 </thead>
 <tr>
-<td class="success">analyzeMethod_withComplexControlFlow_shouldIdentifyAllConditionVariables()</td>
-<td class="success">0.011s</td>
+<td class="success">generateTestFile_withMethodContainingListParameter_shouldAddListImports()</td>
+<td class="success">0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">analyzeMethod_withConditions_shouldIdentifyParametersInConditions()</td>
-<td class="success">0.004s</td>
+<td class="success">generateTestFile_withSimpleMethod_shouldCreateTestFile()</td>
+<td class="success">0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">analyzeMethod_withParameters_shouldReturnCorrectParameterInfo()</td>
+<td class="success">generateTestFile_withVoidMethod_shouldCreateTestFile()</td>
 <td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">analyzeMethod_withSimpleMethod_shouldReturnCorrectInfo()</td>
-<td class="success">0.002s</td>
+<td class="success">generateTestFiles_withMultipleMethods_shouldCreateTestFiles()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">generateTestFiles_withNoMethods_shouldReturnZero()</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 </table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>[Test worker] INFO com.codeanalyzer.generator.JUnitTestGenerator - Generated test file: /tmp/junit4239958956805956326/VoidClassTest.java
+[Test worker] INFO com.codeanalyzer.generator.JUnitTestGenerator - Generated test file: /tmp/junit811437722791793814/SimpleClassTest.java
+[Test worker] INFO com.codeanalyzer.generator.JUnitTestGenerator - Generated test file: /tmp/junit1723548411633672507/ClassBTest.java
+[Test worker] INFO com.codeanalyzer.generator.JUnitTestGenerator - Generated test file: /tmp/junit1723548411633672507/ClassATest.java
+[Test worker] INFO com.codeanalyzer.generator.JUnitTestGenerator - Generated test file: /tmp/junit17126772473431329577/ListProcessorTest.java
+</pre>
+</span>
 </div>
 </div>
 <div id="footer">

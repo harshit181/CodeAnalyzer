@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.codeanalyzer.model.MethodInfoTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-04-16T08:14:45" hostname="abade34b91b3" time="0.011">
+<testsuite name="com.codeanalyzer.model.MethodInfoTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-04-16T09:22:52" hostname="586b0a3852b5" time="0.002">
   <properties/>
-  <testcase name="constructor_withBasicInfo_shouldCreateInstance()" classname="com.codeanalyzer.model.MethodInfoTest" time="0.006"/>
+  <testcase name="constructor_withBasicInfo_shouldCreateInstance()" classname="com.codeanalyzer.model.MethodInfoTest" time="0.001"/>
   <testcase name="getSignature_withParameters_shouldReturnCorrectSignature()" classname="com.codeanalyzer.model.MethodInfoTest" time="0.0"/>
-  <testcase name="getSignature_withNoParameters_shouldReturnCorrectSignature()" classname="com.codeanalyzer.model.MethodInfoTest" time="0.001"/>
-  <testcase name="toString_shouldIncludeSignature()" classname="com.codeanalyzer.model.MethodInfoTest" time="0.001"/>
+  <testcase name="getSignature_withNoParameters_shouldReturnCorrectSignature()" classname="com.codeanalyzer.model.MethodInfoTest" time="0.0"/>
+  <testcase name="toString_shouldIncludeSignature()" classname="com.codeanalyzer.model.MethodInfoTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -62,3 +62,12 @@ echo "Running Gradle build..."
 
 echo "Running Code Analyzer on sample Java file..."
 ./gradlew run --args="-s test_src"
+
+# Create directory for test generation
+mkdir -p generated-tests
+
+echo -e "\nRunning Code Analyzer with JUnit test generation..."
+./gradlew run --args="-s test_src -g -o generated-tests"
+
+echo -e "\nGenerated JUnit test files:"
+ls -la generated-tests

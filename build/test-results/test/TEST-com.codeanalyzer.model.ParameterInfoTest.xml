@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.codeanalyzer.model.ParameterInfoTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-04-16T08:14:45" hostname="abade34b91b3" time="0.008">
+<testsuite name="com.codeanalyzer.model.ParameterInfoTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-04-16T09:22:52" hostname="586b0a3852b5" time="0.003">
   <properties/>
   <testcase name="toString_shouldIncludeNameAndType()" classname="com.codeanalyzer.model.ParameterInfoTest" time="0.0"/>
-  <testcase name="toString_whenUsedInCondition_shouldIndicateThat()" classname="com.codeanalyzer.model.ParameterInfoTest" time="0.001"/>
-  <testcase name="setUsedInCondition_whenFalse_shouldUpdateState()" classname="com.codeanalyzer.model.ParameterInfoTest" time="0.001"/>
+  <testcase name="toString_whenUsedInCondition_shouldIndicateThat()" classname="com.codeanalyzer.model.ParameterInfoTest" time="0.0"/>
+  <testcase name="setUsedInCondition_whenFalse_shouldUpdateState()" classname="com.codeanalyzer.model.ParameterInfoTest" time="0.0"/>
   <testcase name="setUsedInCondition_whenTrue_shouldUpdateState()" classname="com.codeanalyzer.model.ParameterInfoTest" time="0.0"/>
   <testcase name="constructor_withNameAndType_shouldCreateInstance()" classname="com.codeanalyzer.model.ParameterInfoTest" time="0.001"/>
-  <testcase name="isUsedInCondition_initialValue_shouldBeFalse()" classname="com.codeanalyzer.model.ParameterInfoTest" time="0.001"/>
+  <testcase name="isUsedInCondition_initialValue_shouldBeFalse()" classname="com.codeanalyzer.model.ParameterInfoTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

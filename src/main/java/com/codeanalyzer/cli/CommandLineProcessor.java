@@ -1,6 +1,7 @@
 package com.codeanalyzer.cli;
 
 import com.codeanalyzer.analyzer.CodeAnalyzer;
+import com.codeanalyzer.generator.JUnitTestGenerator;
 import com.codeanalyzer.generator.TestRequestGenerator;
 import com.codeanalyzer.model.AnalysisResult;
 import com.codeanalyzer.model.MethodInfo;
@@ -49,9 +50,23 @@ public class CommandLineProcessor {
                 .longOpt("help")
                 .desc("Display help information")
                 .build();
+                
+        Option generateTestsOption = Option.builder("g")
+                .longOpt("generate-tests")
+                .desc("Generate JUnit tests for analyzed code")
+                .build();
+                
+        Option outputDirOption = Option.builder("o")
+                .longOpt("output-dir")
+                .desc("Output directory for generated test files (default: ./generated-tests)")
+                .hasArg()
+                .argName("OUTPUT_DIR")
+                .build();
         
         options.addOption(sourcePathOption);
         options.addOption(helpOption);
+        options.addOption(generateTestsOption);
+        options.addOption(outputDirOption);
         
         return options;
     }
@@ -69,7 +84,10 @@ public class CommandLineProcessor {
             }
             
             String sourcePath = cmd.getOptionValue("source");
-            runAnalysis(sourcePath);
+            boolean generateTests = cmd.hasOption("generate-tests");
+            String outputDir = cmd.getOptionValue("output-dir", "./generated-tests");
+            
+            runAnalysis(sourcePath, generateTests, outputDir);
             
         } catch (ParseException e) {
             logger.error("Error parsing command line arguments", e);
@@ -91,8 +109,12 @@ public class CommandLineProcessor {
     
     /**
      * Runs the code analysis and handles user interaction.
+     * 
+     * @param sourcePath Path to the source code to analyze
+     * @param generateTests Whether to generate JUnit tests
+     * @param outputDir Directory where test files will be generated
      */
-    private void runAnalysis(String sourcePath) {
+    private void runAnalysis(String sourcePath, boolean generateTests, String outputDir) {
         Path sourceDir = Paths.get(sourcePath);
         File sourceDirFile = sourceDir.toFile();
         
@@ -114,6 +136,11 @@ public class CommandLineProcessor {
         System.out.println("\nAnalysis completed. Found " + result.getMethods().size() + " methods:");
         displayMethods(result.getMethods());
         
+        // If generate-tests flag is set, generate JUnit tests
+        if (generateTests) {
+            generateJUnitTests(result.getMethods(), outputDir);
+        }
+        
         // Check if we're running in an environment with input available
         if (System.console() != null) {
             // Interactive mode with user input
@@ -130,6 +157,13 @@ public class CommandLineProcessor {
                         int methodId = Integer.parseInt(input);
                         if (methodId >= 0 && methodId < result.getMethods().size()) {
                             generateTestObjects(result.getMethods().get(methodId));
+                            
+                            // Ask if user wants to generate a JUnit test for this method
+                            System.out.println("\nDo you want to generate a JUnit test for this method? (y/n): ");
+                            String generateOption = scanner.nextLine().trim().toLowerCase();
+                            if (generateOption.startsWith("y")) {
+                                generateJUnitTestForMethod(result.getMethods().get(methodId), outputDir);
+                            }
                         } else {
                             System.out.println("Invalid method ID. Please try again.");
                         }
@@ -143,6 +177,39 @@ public class CommandLineProcessor {
         } else {
             // Non-interactive mode, just display info about methods
             System.out.println("\nRunning in non-interactive mode. To generate test objects, run with an interactive console.");
+        }
+    }
+    
+    /**
+     * Generates JUnit tests for all methods.
+     */
+    private void generateJUnitTests(List<MethodInfo> methods, String outputDir) {
+        System.out.println("\nGenerating JUnit tests in directory: " + outputDir);
+        
+        JUnitTestGenerator generator = new JUnitTestGenerator(outputDir);
+        int filesGenerated = generator.generateTestFiles(methods);
+        
+        if (filesGenerated > 0) {
+            System.out.println("Successfully generated " + filesGenerated + " JUnit test files.");
+        } else {
+            System.out.println("No JUnit test files were generated.");
+        }
+    }
+    
+    /**
+     * Generates a JUnit test for a specific method.
+     */
+    private void generateJUnitTestForMethod(MethodInfo method, String outputDir) {
+        System.out.println("\nGenerating JUnit test for method: " + method.getSignature());
+        
+        JUnitTestGenerator generator = new JUnitTestGenerator(outputDir);
+        boolean success = generator.generateTestFile(method);
+        
+        if (success) {
+            System.out.println("Successfully generated JUnit test file: " + 
+                    method.getClassName().substring(method.getClassName().lastIndexOf('.') + 1) + "Test.java");
+        } else {
+            System.out.println("Failed to generate JUnit test file.");
         }
     }
     
