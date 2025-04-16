@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.codeanalyzer.generator.JUnitTestGeneratorTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-04-16T09:22:51" hostname="586b0a3852b5" time="0.025">
+  <properties/>
+  <testcase name="generateTestFile_withVoidMethod_shouldCreateTestFile()" classname="com.codeanalyzer.generator.JUnitTestGeneratorTest" time="0.002"/>
+  <testcase name="generateTestFile_withSimpleMethod_shouldCreateTestFile()" classname="com.codeanalyzer.generator.JUnitTestGeneratorTest" time="0.005"/>
+  <testcase name="generateTestFiles_withMultipleMethods_shouldCreateTestFiles()" classname="com.codeanalyzer.generator.JUnitTestGeneratorTest" time="0.005"/>
+  <testcase name="generateTestFiles_withNoMethods_shouldReturnZero()" classname="com.codeanalyzer.generator.JUnitTestGeneratorTest" time="0.001"/>
+  <testcase name="generateTestFile_withMethodContainingListParameter_shouldAddListImports()" classname="com.codeanalyzer.generator.JUnitTestGeneratorTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO com.codeanalyzer.generator.JUnitTestGenerator - Generated test file: /tmp/junit4239958956805956326/VoidClassTest.java
+[Test worker] INFO com.codeanalyzer.generator.JUnitTestGenerator - Generated test file: /tmp/junit811437722791793814/SimpleClassTest.java
+[Test worker] INFO com.codeanalyzer.generator.JUnitTestGenerator - Generated test file: /tmp/junit1723548411633672507/ClassBTest.java
+[Test worker] INFO com.codeanalyzer.generator.JUnitTestGenerator - Generated test file: /tmp/junit1723548411633672507/ClassATest.java
+[Test worker] INFO com.codeanalyzer.generator.JUnitTestGenerator - Generated test file: /tmp/junit17126772473431329577/ListProcessorTest.java
+]]></system-err>
+</testsuite>

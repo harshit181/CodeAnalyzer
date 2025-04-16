@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.codeanalyzer.generator.TestCaseTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-04-16T08:14:45" hostname="abade34b91b3" time="0.008">
+<testsuite name="com.codeanalyzer.generator.TestCaseTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2025-04-16T09:22:52" hostname="586b0a3852b5" time="0.008">
   <properties/>
   <testcase name="getParameterValues_withNullValue_shouldStoreNullValue()" classname="com.codeanalyzer.generator.TestCaseTest" time="0.001"/>
-  <testcase name="getParameterValues_shouldReturnMap()" classname="com.codeanalyzer.generator.TestCaseTest" time="0.0"/>
+  <testcase name="getParameterValues_shouldReturnMap()" classname="com.codeanalyzer.generator.TestCaseTest" time="0.001"/>
   <testcase name="getExpectedBehavior_shouldReturnExpectedBehavior()" classname="com.codeanalyzer.generator.TestCaseTest" time="0.0"/>
+  <testcase name="toString_withNonStringParameter_shouldUseToString()" classname="com.codeanalyzer.generator.TestCaseTest" time="0.001"/>
+  <testcase name="toString_withNullParameter_shouldFormatValueCorrectly()" classname="com.codeanalyzer.generator.TestCaseTest" time="0.0"/>
+  <testcase name="toString_withStringParameter_shouldFormatValueWithQuotes()" classname="com.codeanalyzer.generator.TestCaseTest" time="0.0"/>
   <testcase name="multipleParameterValues_shouldAllBeStored()" classname="com.codeanalyzer.generator.TestCaseTest" time="0.0"/>
-  <testcase name="toString_shouldIncludeDescriptionAndParameters()" classname="com.codeanalyzer.generator.TestCaseTest" time="0.002"/>
+  <testcase name="toString_shouldIncludeDescriptionAndParameters()" classname="com.codeanalyzer.generator.TestCaseTest" time="0.0"/>
   <testcase name="constructor_withAllParameters_shouldCreateInstance()" classname="com.codeanalyzer.generator.TestCaseTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

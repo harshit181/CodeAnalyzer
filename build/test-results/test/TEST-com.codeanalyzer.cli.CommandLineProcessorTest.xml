@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.codeanalyzer.cli.CommandLineProcessorTest" tests="7" skipped="0" failures="1" errors="0" timestamp="2025-04-16T08:14:44" hostname="abade34b91b3" time="0.193">
+<testsuite name="com.codeanalyzer.cli.CommandLineProcessorTest" tests="9" skipped="0" failures="1" errors="0" timestamp="2025-04-16T09:22:51" hostname="586b0a3852b5" time="0.041">
   <properties/>
-  <testcase name="process_withLongHelpOption_shouldDisplayHelp()" classname="com.codeanalyzer.cli.CommandLineProcessorTest" time="0.029"/>
-  <testcase name="process_withoutRequiredOptions_shouldDisplayErrorAndHelp()" classname="com.codeanalyzer.cli.CommandLineProcessorTest" time="0.004">
+  <testcase name="process_withLongHelpOption_shouldDisplayHelp()" classname="com.codeanalyzer.cli.CommandLineProcessorTest" time="0.003"/>
+  <testcase name="process_withoutRequiredOptions_shouldDisplayErrorAndHelp()" classname="com.codeanalyzer.cli.CommandLineProcessorTest" time="0.003">
     <failure message="org.opentest4j.AssertionFailedError: expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;true&gt; but was: &lt;false&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at app//org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:40)
@@ -96,11 +96,13 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="process_withInvalidOption_shouldDisplayErrorAndHelp()" classname="com.codeanalyzer.cli.CommandLineProcessorTest" time="0.003"/>
-  <testcase name="process_withValidSourcePath_shouldAnalyzeCode(Path)" classname="com.codeanalyzer.cli.CommandLineProcessorTest" time="0.145"/>
+  <testcase name="process_withGenerateTestsOption_shouldGenerateTests(Path)" classname="com.codeanalyzer.cli.CommandLineProcessorTest" time="0.008"/>
+  <testcase name="process_withInvalidOption_shouldDisplayErrorAndHelp()" classname="com.codeanalyzer.cli.CommandLineProcessorTest" time="0.002"/>
+  <testcase name="process_withValidSourcePath_shouldAnalyzeCode(Path)" classname="com.codeanalyzer.cli.CommandLineProcessorTest" time="0.005"/>
   <testcase name="process_withNonDirectorySourcePath_shouldDisplayError(Path)" classname="com.codeanalyzer.cli.CommandLineProcessorTest" time="0.002"/>
   <testcase name="process_withHelpOption_shouldDisplayHelp()" classname="com.codeanalyzer.cli.CommandLineProcessorTest" time="0.002"/>
-  <testcase name="process_withInvalidSourcePath_shouldDisplayError(Path)" classname="com.codeanalyzer.cli.CommandLineProcessorTest" time="0.001"/>
+  <testcase name="process_withInvalidSourcePath_shouldDisplayError(Path)" classname="com.codeanalyzer.cli.CommandLineProcessorTest" time="0.002"/>
+  <testcase name="process_withInvalidOutputDir_shouldCreateDirectory(Path)" classname="com.codeanalyzer.cli.CommandLineProcessorTest" time="0.005"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

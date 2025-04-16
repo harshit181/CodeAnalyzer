@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.codeanalyzer.util.JavaParserUtilTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2025-04-16T08:14:45" hostname="abade34b91b3" time="0.013">
+<testsuite name="com.codeanalyzer.util.JavaParserUtilTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2025-04-16T09:22:52" hostname="586b0a3852b5" time="0.013">
   <properties/>
-  <testcase name="parseExpression_withInvalidExpression_shouldThrowException()" classname="com.codeanalyzer.util.JavaParserUtilTest" time="0.002"/>
-  <testcase name="parseExpression_withValidStringLiteral_shouldReturnExpression()" classname="com.codeanalyzer.util.JavaParserUtilTest" time="0.001"/>
+  <testcase name="parseExpression_withInvalidExpression_shouldThrowException()" classname="com.codeanalyzer.util.JavaParserUtilTest" time="0.001"/>
+  <testcase name="parseExpression_withValidStringLiteral_shouldReturnExpression()" classname="com.codeanalyzer.util.JavaParserUtilTest" time="0.0"/>
   <testcase name="parseExpression_withValidBinaryExpression_shouldReturnExpression()" classname="com.codeanalyzer.util.JavaParserUtilTest" time="0.001"/>
-  <testcase name="parseExpression_withValidVariableReference_shouldReturnExpression()" classname="com.codeanalyzer.util.JavaParserUtilTest" time="0.0"/>
-  <testcase name="parseFile_withInvalidJavaFile_shouldThrowException(Path)" classname="com.codeanalyzer.util.JavaParserUtilTest" time="0.002"/>
-  <testcase name="parseFile_withNonExistentFile_shouldThrowException(Path)" classname="com.codeanalyzer.util.JavaParserUtilTest" time="0.001"/>
+  <testcase name="parseExpression_withValidVariableReference_shouldReturnExpression()" classname="com.codeanalyzer.util.JavaParserUtilTest" time="0.001"/>
+  <testcase name="parseFile_withInvalidJavaFile_shouldThrowException(Path)" classname="com.codeanalyzer.util.JavaParserUtilTest" time="0.003"/>
+  <testcase name="parseFile_withNonExistentFile_shouldThrowException(Path)" classname="com.codeanalyzer.util.JavaParserUtilTest" time="0.002"/>
   <testcase name="parseFile_withValidJavaFile_shouldReturnCompilationUnit(Path)" classname="com.codeanalyzer.util.JavaParserUtilTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

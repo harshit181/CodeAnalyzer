@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.codeanalyzer.generator.ValueGeneratorTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2025-04-16T08:14:45" hostname="abade34b91b3" time="0.036">
+<testsuite name="com.codeanalyzer.generator.ValueGeneratorTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2025-04-16T09:22:52" hostname="586b0a3852b5" time="0.036">
   <properties/>
-  <testcase name="generateLongString_shouldReturnLongString()" classname="com.codeanalyzer.generator.ValueGeneratorTest" time="0.002"/>
-  <testcase name="generateNegativeValue_withInvalidType_shouldThrowException()" classname="com.codeanalyzer.generator.ValueGeneratorTest" time="0.002"/>
+  <testcase name="generateLongString_shouldReturnLongString()" classname="com.codeanalyzer.generator.ValueGeneratorTest" time="0.001"/>
+  <testcase name="generateNegativeValue_withInvalidType_shouldThrowException()" classname="com.codeanalyzer.generator.ValueGeneratorTest" time="0.001"/>
   <testcase name="generateCollectionWithMultipleItems_withInvalidType_shouldThrowException()" classname="com.codeanalyzer.generator.ValueGeneratorTest" time="0.001"/>
   <testcase name="generateNegativeValue_withNumericTypes_shouldReturnNegativeValues()" classname="com.codeanalyzer.generator.ValueGeneratorTest" time="0.001"/>
-  <testcase name="generateEdgeCaseValue_withStringAndCollections_shouldReturnEmptyValues()" classname="com.codeanalyzer.generator.ValueGeneratorTest" time="0.0"/>
-  <testcase name="generateValidValue_withCollection_shouldReturnCollectionValue()" classname="com.codeanalyzer.generator.ValueGeneratorTest" time="0.001"/>
-  <testcase name="generatePositiveValue_withInvalidType_shouldThrowException()" classname="com.codeanalyzer.generator.ValueGeneratorTest" time="0.002"/>
-  <testcase name="generatePositiveValue_withNumericTypes_shouldReturnPositiveValues()" classname="com.codeanalyzer.generator.ValueGeneratorTest" time="0.003"/>
+  <testcase name="generateEdgeCaseValue_withStringAndCollections_shouldReturnEmptyValues()" classname="com.codeanalyzer.generator.ValueGeneratorTest" time="0.001"/>
+  <testcase name="generateValidValue_withCollection_shouldReturnCollectionValue()" classname="com.codeanalyzer.generator.ValueGeneratorTest" time="0.0"/>
+  <testcase name="generatePositiveValue_withInvalidType_shouldThrowException()" classname="com.codeanalyzer.generator.ValueGeneratorTest" time="0.0"/>
+  <testcase name="generatePositiveValue_withNumericTypes_shouldReturnPositiveValues()" classname="com.codeanalyzer.generator.ValueGeneratorTest" time="0.0"/>
   <testcase name="generateValidValue_withString_shouldReturnStringValue()" classname="com.codeanalyzer.generator.ValueGeneratorTest" time="0.0"/>
   <testcase name="generateValidValue_withInt_shouldReturnIntValue()" classname="com.codeanalyzer.generator.ValueGeneratorTest" time="0.001"/>
   <testcase name="generateStringWithSpecialChars_shouldReturnStringWithSpecialChars()" classname="com.codeanalyzer.generator.ValueGeneratorTest" time="0.0"/>
-  <testcase name="generateEdgeCaseValue_withNumericTypes_shouldReturnMaxValues()" classname="com.codeanalyzer.generator.ValueGeneratorTest" time="0.001"/>
-  <testcase name="generateEmptyCollection_shouldReturnEmptyCollection()" classname="com.codeanalyzer.generator.ValueGeneratorTest" time="0.002"/>
-  <testcase name="generateValidValue_withCustomType_shouldReturnPlaceholder()" classname="com.codeanalyzer.generator.ValueGeneratorTest" time="0.001"/>
-  <testcase name="generateEmptyCollection_withInvalidType_shouldThrowException()" classname="com.codeanalyzer.generator.ValueGeneratorTest" time="0.001"/>
+  <testcase name="generateEdgeCaseValue_withNumericTypes_shouldReturnMaxValues()" classname="com.codeanalyzer.generator.ValueGeneratorTest" time="0.0"/>
+  <testcase name="generateEmptyCollection_shouldReturnEmptyCollection()" classname="com.codeanalyzer.generator.ValueGeneratorTest" time="0.001"/>
+  <testcase name="generateValidValue_withCustomType_shouldReturnPlaceholder()" classname="com.codeanalyzer.generator.ValueGeneratorTest" time="0.0"/>
+  <testcase name="generateEmptyCollection_withInvalidType_shouldThrowException()" classname="com.codeanalyzer.generator.ValueGeneratorTest" time="0.0"/>
   <testcase name="generateValidValue_withBoolean_shouldReturnBooleanValue()" classname="com.codeanalyzer.generator.ValueGeneratorTest" time="0.0"/>
   <testcase name="generateCollectionWithMultipleItems_shouldReturnNonEmptyCollection()" classname="com.codeanalyzer.generator.ValueGeneratorTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>

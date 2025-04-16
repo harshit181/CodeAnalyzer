@@ -136,6 +136,72 @@ class CommandLineProcessorTest {
     }
     
     @Test
+    void process_withGenerateTestsOption_shouldGenerateTests(@TempDir Path tempDir) throws IOException {
+        // Arrange
+        // Create a Java file in the temp directory
+        Path javaDir = tempDir.resolve("src");
+        Files.createDirectories(javaDir);
+        Path javaFile = javaDir.resolve("Test.java");
+        Files.writeString(javaFile, 
+            "public class Test { public void testMethod() { } }"
+        );
+        
+        // Create output directory
+        Path outputDir = tempDir.resolve("tests");
+        
+        String[] args = {"-s", tempDir.toString(), "-g", "-o", outputDir.toString()};
+        
+        // Act
+        commandLineProcessor.process(args);
+        
+        // Assert
+        String output = outContent.toString();
+        assertTrue(output.contains("Analyzing source code"));
+        assertTrue(output.contains("Analysis completed"));
+        assertTrue(output.contains("Generating JUnit tests in directory"));
+        
+        // Verify test file was created
+        Path expectedTestFile = outputDir.resolve("TestTest.java");
+        assertTrue(Files.exists(expectedTestFile));
+        
+        // Verify content of test file
+        String fileContent = Files.readString(expectedTestFile);
+        assertTrue(fileContent.contains("class TestTest"));
+        assertTrue(fileContent.contains("testMethod"));
+    }
+    
+    @Test
+    void process_withInvalidOutputDir_shouldCreateDirectory(@TempDir Path tempDir) throws IOException {
+        // Arrange
+        // Create a Java file in the temp directory
+        Path javaDir = tempDir.resolve("src");
+        Files.createDirectories(javaDir);
+        Path javaFile = javaDir.resolve("Test.java");
+        Files.writeString(javaFile, 
+            "public class Test { public void testMethod() { } }"
+        );
+        
+        // Specify a non-existent output directory
+        Path outputDir = tempDir.resolve("non-existent-dir");
+        
+        String[] args = {"-s", tempDir.toString(), "-g", "-o", outputDir.toString()};
+        
+        // Act
+        commandLineProcessor.process(args);
+        
+        // Assert
+        String output = outContent.toString();
+        assertTrue(output.contains("Generating JUnit tests in directory"));
+        
+        // Verify directory was created
+        assertTrue(Files.exists(outputDir));
+        
+        // Verify test file was created
+        Path expectedTestFile = outputDir.resolve("TestTest.java");
+        assertTrue(Files.exists(expectedTestFile));
+    }
+    
+    @Test
     void process_withInvalidOption_shouldDisplayErrorAndHelp() {
         // Arrange
         String[] args = {"-x", "invalid"};

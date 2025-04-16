@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.codeanalyzer.generator.TestRequestGeneratorTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-04-16T08:14:45" hostname="abade34b91b3" time="0.01">
+<testsuite name="com.codeanalyzer.generator.TestRequestGeneratorTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-04-16T09:22:52" hostname="586b0a3852b5" time="0.006">
   <properties/>
   <testcase name="generateTestCases_withNoParameters_shouldReturnSingleTestCase()" classname="com.codeanalyzer.generator.TestRequestGeneratorTest" time="0.001"/>
   <testcase name="generateTestCases_withMultipleParameters_shouldGenerateCombinations()" classname="com.codeanalyzer.generator.TestRequestGeneratorTest" time="0.002"/>
   <testcase name="generateTestCases_withOneParameter_shouldGenerateBasicTestCases()" classname="com.codeanalyzer.generator.TestRequestGeneratorTest" time="0.001"/>
   <testcase name="generateTestCases_withCustomTypes_shouldHandleAppropriately()" classname="com.codeanalyzer.generator.TestRequestGeneratorTest" time="0.001"/>
-  <testcase name="generateTestCases_withEdgeCases_shouldIncludeEdgeCaseTest()" classname="com.codeanalyzer.generator.TestRequestGeneratorTest" time="0.001"/>
+  <testcase name="generateTestCases_withEdgeCases_shouldIncludeEdgeCaseTest()" classname="com.codeanalyzer.generator.TestRequestGeneratorTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
